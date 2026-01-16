@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 VIP Premium Mentorship | Zero to Hero Trading Program</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #7c3aed;
+            --primary-dark: #5b21b6;
+            --primary-light: #8b5cf6;
+            --accent: #f59e0b;
+            --accent-dark: #d97706;
+            --dark: #0f172a;
+            --darker: #020617;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --success: #10b981;
+            --danger: #ef4444;
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.25);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            --radius: 16px;
+            --radius-xl: 24px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Animated Background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(124, 58, 237, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+            animation: pulse 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.2; }
+            100% { opacity: 0.4; }
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 5%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary);
+            box-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
+        }
+
+        .logo-text h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            background: linear-gradient(to right, #f59e0b, #fbbf24);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text p {
+            font-size: 0.8rem;
+            color: var(--gray);
+            letter-spacing: 1px;
+        }
+
+        .header-badge {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 5px 15px rgba(124, 58, 237, 0.3);
+        }
+
+        /* Main Container - No scrolling required initially */
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 120px 5% 50px;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        @media (max-width: 1024px) {
+            .main-container {
+                grid-template-columns: 1fr;
+                padding-top: 100px;
+            }
+        }
+
+        /* Hero Content */
+        .hero-content {
+            padding-right: 30px;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-content {
+                padding-right: 0;
+            }
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: linear-gradient(to right, rgba(245, 158, 11, 0.15), rgba(245, 158, 11, 0.05));
+            color: var(--accent);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+
+        .hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #f8fafc, #cbd5e1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        /* Features List */
+        .features-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 640px) {
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            border-radius: var(--radius);
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid var(--primary);
+        }
+
+        .feature-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        /* Trust Indicators */
+        .trust-indicators {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        .trust-icon {
+            color: var(--success);
+        }
+
+        /* Packages Section */
+        .packages-section {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: var(--radius-xl);
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: var(--shadow-xl);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .packages-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title span {
+            font-size: 1rem;
+            color: var(--accent);
+            background: rgba(245, 158, 11, 0.1);
+            padding: 5px 15px;
+            border-radius: 30px;
+        }
+
+        /* Packages Grid */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 640px) {
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Package Card */
+        .package-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.8));
+            border-radius: var(--radius);
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(124, 58, 237, 0.5);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .package-card.popular {
+            border: 2px solid var(--accent);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .package-card.popular {
+                transform: scale(1);
+            }
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: linear-gradient(to right, var(--accent), var(--accent-dark));
+            color: var(--dark);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 0.8rem;
+            box-shadow: 0 5px 15px rgba(245, 158, 11, 0.3);
+        }
+
+        .package-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .package-icon {
+            color: var(--primary);
+        }
+
+        .price-container {
+            margin-bottom: 20px;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: var(--gray);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .current-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        .current-price span {
+            font-size: 1rem;
+            color: var(--gray);
+            font-weight: 400;
+        }
+
+        .discount-badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .package-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .package-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .package-features li i {
+            color: var(--success);
+            font-size: 0.9rem;
+        }
+
+        .select-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .select-btn:hover {
+            background: linear-gradient(to right, var(--primary-light), var(--primary));
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(124, 58, 237, 0.4);
+        }
+
+        .select-btn.popular-btn {
+            background: linear-gradient(to right, var(--accent), var(--accent-dark));
+        }
+
+        .select-btn.popular-btn:hover {
+            background: linear-gradient(to right, #fbbf24, var(--accent));
+            box-shadow: 0 10px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        /* Payment Flow (Initially Hidden) */
+        .payment-flow {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(2, 6, 23, 0.95);
+            z-index: 2000;
+            backdrop-filter: blur(10px);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .payment-modal {
+            background: linear-gradient(145deg, #0f172a, #1e293b);
+            width: 100%;
+            max-width: 500px;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .modal-header {
+            padding: 25px 30px;
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .modal-header h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .close-modal {
+            background: rgba(0, 0, 0, 0.2);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-body {
+            padding: 30px;
+        }
+
+        .selected-plan-display {
+            background: rgba(124, 58, 237, 0.1);
+            border-radius: var(--radius);
+            padding: 15px;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .plan-name {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .plan-price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        /* Billing Form */
+        .billing-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #cbd5e1;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: white;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(124, 58, 237, 0.05);
+        }
+
+        .continue-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .continue-btn:hover {
+            background: linear-gradient(to right, var(--primary-light), var(--primary));
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(124, 58, 237, 0.4);
+        }
+
+        /* Loading Animation */
+        .loading-container {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .loading-text {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .loading-bar-container {
+            width: 100%;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin: 30px auto 40px;
+            overflow: hidden;
+            max-width: 400px;
+        }
+
+        .loading-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            border-radius: 10px;
+            transition: width 0.1s linear;
+        }
+
+        /* QR Code Container */
+        .qr-container {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .qr-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .qr-subtitle {
+            color: #94a3b8;
+            margin-bottom: 25px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .qr-code {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto 25px;
+            border-radius: var(--radius);
+            padding: 15px;
+            background: white;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .qr-code img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        .timer {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .upi-details {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: var(--radius);
+            max-width: 400px;
+            margin: 25px auto 0;
+        }
+
+        .upi-id {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        /* Urgency Elements */
+        .urgency-badge {
+            background: linear-gradient(to right, #ef4444, #dc2626);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            animation: pulse 2s infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .testimonial-badge {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-top: 30px;
+            border-left: 4px solid var(--success);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #cbd5e1;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Guarantee Badge */
+        .guarantee-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+            padding: 15px;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: var(--radius);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .guarantee-text {
+            font-weight: 600;
+            color: #10b981;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 5%;
+            margin-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-link:hover {
+            color: var(--primary);
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            color: #64748b;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Steps Indicator */
+        .steps-indicator {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 30px;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .step-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-bottom: 10px;
+            transition: var(--transition);
+        }
+
+        .step.active .step-circle {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+        }
+
+        .step-line {
+            position: absolute;
+            top: 20px;
+            left: calc(100% + 5px);
+            width: 20px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .step:last-child .step-line {
+            display: none;
+        }
+
+        .step-text {
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        .step.active .step-text {
+            color: white;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/6967f7bfdbe60_62370071-468b-4dd0-b245-3449cb1f2283.jfif" alt="Stock Burner Official" class="logo-img">
+            <div class="logo-text">
+                <h1>STOCK BURNER OFFICIAL</h1>
+                <p>VIP PREMIUM MENTORSHIP</p>
+            </div>
+        </div>
+        <div class="header-badge">
+            <i class="fas fa-bolt"></i>
+            UPI: mehtaisbackofficial7@oksbi
+        </div>
+    </header>
+    
+    <!-- Main Content - No scrolling needed initially -->
+    <main class="main-container">
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="hero-tag">
+                <i class="fas fa-fire"></i> LIMITED TIME OFFER
+            </div>
+            
+            <h1 class="hero-title">
+                TRANSFORM YOUR TRADING FROM <span style="color: #f59e0b;">ZERO TO HERO</span> WITH OUR PREMIUM MENTORSHIP
+            </h1>
+            
+            <p class="hero-subtitle">
+                Join 5,000+ successful traders who've transformed their portfolios with our proven strategies. Get daily high-probability calls, risk management, and lifetime support.
+            </p>
+            
+            <!-- Urgency Badge -->
+            <div class="urgency-badge">
+                <i class="fas fa-clock"></i> Offer ends in <span id="countdown">23:59:59</span>
+            </div>
+            
+            <!-- Features List -->
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <h4>Daily 6 Zero-To-Hero Calls</h4>
+                        <p>High-potential opportunities</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div>
+                        <h4>Risk Management</h4>
+                        <p>Protect your capital</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div>
+                        <h4>Expiry Special Calls</h4>
+                        <p>Maximize expiry day gains</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-life-ring"></i>
+                    </div>
+                    <div>
+                        <h4>Lifetime Support</h4>
+                        <p>Never trade alone again</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trust Indicators -->
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <i class="fas fa-check-circle trust-icon"></i>
+                    <span>5,000+ Successful Traders</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-check-circle trust-icon"></i>
+                    <span>24/7 Telegram Support</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-check-circle trust-icon"></i>
+                    <span>90%+ Accuracy Rate</span>
+                </div>
+            </div>
+            
+            <!-- Testimonial -->
+            <div class="testimonial-badge">
+                <p class="testimonial-text">"Joined 3 months ago with ₹50k capital. Today my portfolio is at ₹2.8L. The mentorship changed my trading game completely!"</p>
+                <div class="testimonial-author">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Rahul Sharma, Delhi</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Packages Section -->
+        <section class="packages-section">
+            <h2 class="section-title">
+                Choose Your Success Plan
+                <span>🔥 87% OFF TODAY</span>
+            </h2>
+            
+            <div class="packages-grid">
+                <!-- 3 Months Package -->
+                <div class="package-card">
+                    <div class="package-name">
+                        <i class="fas fa-calendar-alt package-icon"></i>
+                        3 MONTHS
+                    </div>
+                    <div class="price-container">
+                        <div class="current-price">₹2,499<span>/3mo</span></div>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Daily 6 Premium Calls</li>
+                        <li><i class="fas fa-check"></i> Index Options</li>
+                        <li><i class="fas fa-check"></i> Risk Management</li>
+                        <li><i class="fas fa-check"></i> 3 Months Support</li>
+                    </ul>
+                    <button class="select-btn" data-plan="3months" data-amount="2499" data-name="3 MONTHS">
+                        <i class="fas fa-shopping-cart"></i> Select Plan
+                    </button>
+                </div>
+                
+                <!-- 6 Months Package -->
+                <div class="package-card">
+                    <div class="package-name">
+                        <i class="fas fa-calendar package-icon"></i>
+                        6 MONTHS
+                    </div>
+                    <div class="price-container">
+                        <div class="current-price">₹3,299<span>/6mo</span></div>
+                        <div class="discount-badge">Save 34%</div>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Everything in 3 Months</li>
+                        <li><i class="fas fa-check"></i> Expiry Special Strategies</li>
+                        <li><i class="fas fa-check"></i> Priority Support</li>
+                        <li><i class="fas fa-check"></i> 6 Months Access</li>
+                    </ul>
+                    <button class="select-btn" data-plan="6months" data-amount="3299" data-name="6 MONTHS">
+                        <i class="fas fa-shopping-cart"></i> Select Plan
+                    </button>
+                </div>
+                
+                <!-- Yearly Package (POPULAR) -->
+                <div class="package-card popular">
+                    <div class="popular-badge">
+                        <i class="fas fa-crown"></i> MOST POPULAR
+                    </div>
+                    <div class="package-name">
+                        <i class="fas fa-calendar-star package-icon"></i>
+                        YEARLY ACCESS
+                    </div>
+                    <div class="price-container">
+                        <div class="original-price">₹12,999</div>
+                        <div class="current-price">₹3,799<span>/year</span></div>
+                        <div class="discount-badge">Save 71%</div>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Everything in 6 Months</li>
+                        <li><i class="fas fa-check"></i> Lifetime Strategy Updates</li>
+                        <li><i class="fas fa-check"></i> Personal Mentor Access</li>
+                        <li><i class="fas fa-check"></i> 1 Year Full Access</li>
+                    </ul>
+                    <button class="select-btn popular-btn" data-plan="yearly" data-amount="3799" data-name="YEARLY ACCESS">
+                        <i class="fas fa-bolt"></i> Get Best Value
+                    </button>
+                </div>
+                
+                <!-- Lifetime Package -->
+                <div class="package-card">
+                    <div class="package-name">
+                        <i class="fas fa-infinity package-icon"></i>
+                        LIFETIME ACCESS
+                    </div>
+                    <div class="price-container">
+                        <div class="original-price">₹79,999</div>
+                        <div class="current-price">₹4,399<span>/lifetime</span></div>
+                        <div class="discount-badge">Save 95%</div>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Lifetime All Features</li>
+                        <li><i class="fas fa-check"></i> Personal Portfolio Review</li>
+                        <li><i class="fas fa-check"></i> VIP Telegram Group</li>
+                        <li><i class="fas fa-check"></i> Never Pay Again</li>
+                    </ul>
+                    <button class="select-btn" data-plan="lifetime" data-amount="4399" data-name="LIFETIME ACCESS">
+                        <i class="fas fa-gem"></i> Invest Once
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Guarantee Badge -->
+            <div class="guarantee-badge">
+                <i class="fas fa-shield-check" style="color: #10b981; font-size: 1.5rem;"></i>
+                <div class="guarantee-text">
+                    7-Day Money-Back Guarantee • Secure Payment • Instant Access
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Payment Flow Modal -->
+    <div class="payment-flow" id="paymentFlow">
+        <div class="payment-modal">
+            <div class="modal-header">
+                <h3>Complete Your Payment</h3>
+                <button class="close-modal" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Steps Indicator -->
+                <div class="steps-indicator">
+                    <div class="step active" id="step1-indicator">
+                        <div class="step-circle">1</div>
+                        <div class="step-line"></div>
+                        <div class="step-text">Your Details</div>
+                    </div>
+                    <div class="step" id="step2-indicator">
+                        <div class="step-circle">2</div>
+                        <div class="step-line"></div>
+                        <div class="step-text">Processing</div>
+                    </div>
+                    <div class="step" id="step3-indicator">
+                        <div class="step-circle">3</div>
+                        <div class="step-text">Payment</div>
+                    </div>
+                </div>
+                
+                <!-- Selected Plan Display -->
+                <div class="selected-plan-display">
+                    <div class="plan-name" id="selectedPlanName">YEARLY ACCESS</div>
+                    <div class="plan-price" id="selectedPlanPrice">₹3,799</div>
+                </div>
+                
+                <!-- Step 1: Billing Form -->
+                <div class="flow-step active" id="step1">
+                    <form class="billing-form" id="billingForm">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Full Name</label>
+                            <input type="text" id="name" class="form-input" placeholder="Enter your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="number">WhatsApp Number</label>
+                            <input type="tel" id="number" class="form-input" placeholder="Enter your 10-digit WhatsApp number" required>
+                        </div>
+                        
+                        <button type="submit" class="continue-btn">
+                            <i class="fas fa-lock"></i> Secure Payment - ₹<span id="planAmount">3,799</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Step 2: Loading Animation -->
+                <div class="flow-step" id="step2">
+                    <div class="loading-container">
+                        <div class="loading-text">Securing your subscription...</div>
+                        
+                        <div class="loading-bar-container">
+                            <div class="loading-bar" id="loadingBar"></div>
+                        </div>
+                        
+                        <div class="loading-text">Preparing your payment gateway</div>
+                    </div>
+                </div>
+                
+                <!-- Step 3: QR Code -->
+                <div class="flow-step" id="step3">
+                    <div class="qr-container">
+                        <h3 class="qr-title">Scan to Complete Payment</h3>
+                        <p class="qr-subtitle">Scan this QR code with any UPI app to complete your purchase. Your access will be activated immediately.</p>
+                        
+                        <div class="timer" id="timer">
+                            <i class="fas fa-clock"></i> Time remaining: <span id="timeDisplay">08:00</span>
+                        </div>
+                        
+                        <div class="qr-code" id="qrCode">
+                            <!-- QR Code will be inserted here by JavaScript -->
+                        </div>
+                        
+                        <div class="upi-details">
+                            <div class="upi-id">
+                                <i class="fas fa-qrcode"></i>
+                                UPI ID: mehtaisbackofficial7@oksbi
+                            </div>
+                            <p class="instruction">You can also manually send the payment to this UPI ID. Don't forget to share the screenshot after payment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer (Initially hidden, appears on scroll) -->
+    <footer class="footer" id="footer">
+        <div class="footer-links">
+            <a href="#" class="footer-link">Terms & Conditions</a>
+            <a href="#" class="footer-link">Privacy Policy</a>
+            <a href="#" class="footer-link">Refund Policy</a>
+            <a href="#" class="footer-link">Contact Support</a>
+        </div>
+        <div class="disclaimer">
+            Disclaimer: This disclaimer outlines that PRIC TECHNOLOGY PRIVATE LIMITED, as an organization, shall not be held accountable for any content or materials disseminated by a content creator on or via any app or website affiliated with us. By utilizing our services, you acknowledge and agree to the terms set forth in this disclaimer. Trading in stock market is subject to market risks. Please read all scheme related documents carefully before investing.
+        </div>
+    </footer>
+
+    <script>
+        // Global variables
+        let selectedPlan = null;
+        let selectedPlanName = '';
+        let selectedPlanAmount = 0;
+        let timerInterval = null;
+        let timeLeft = 480; // 8 minutes in seconds
+        
+        // Initialize countdown timer for urgency badge
+        function initCountdown() {
+            const countdownElement = document.getElementById('countdown');
+            let hours = 23;
+            let minutes = 59;
+            let seconds = 59;
+            
+            setInterval(() => {
+                seconds--;
+                if (seconds < 0) {
+                    seconds = 59;
+                    minutes--;
+                    if (minutes < 0) {
+                        minutes = 59;
+                        hours--;
+                        if (hours < 0) {
+                            hours = 23;
+                            minutes = 59;
+                            seconds = 59;
+                        }
+                    }
+                }
+                
+                countdownElement.textContent = 
+                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }, 1000);
+        }
+        
+        // Package selection functionality
+        document.querySelectorAll('.select-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Store selected plan details
+                selectedPlan = this.dataset.plan;
+                selectedPlanName = this.dataset.name;
+                selectedPlanAmount = this.dataset.amount;
+                
+                // Update payment modal
+                document.getElementById('selectedPlanName').textContent = selectedPlanName;
+                document.getElementById('selectedPlanPrice').textContent = `₹${selectedPlanAmount}`;
+                document.getElementById('planAmount').textContent = selectedPlanAmount;
+                
+                // Show payment modal
+                document.getElementById('paymentFlow').style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+                
+                // Reset to step 1
+                showStep(1);
+            });
+        });
+        
+        // Function to show specific step in payment flow
+        function showStep(stepNumber) {
+            // Hide all steps
+            document.querySelectorAll('.flow-step').forEach(step => {
+                step.classList.remove('active');
+            });
+            
+            // Remove active class from all step indicators
+            document.querySelectorAll('.step').forEach(step => {
+                step.classList.remove('active');
+            });
+            
+            // Show the requested step and activate indicator
+            document.getElementById(`step${stepNumber}`).classList.add('active');
+            document.getElementById(`step${stepNumber}-indicator`).classList.add('active');
+            
+            // If step 2 is shown, start the loading animation
+            if (stepNumber === 2) {
+                startLoadingAnimation();
+            }
+            
+            // If step 3 is shown, generate QR code and start timer
+            if (stepNumber === 3) {
+                generateQRCode();
+                startTimer();
+            }
+        }
+        
+        // Billing form submission
+        document.getElementById('billingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate form
+            const name = document.getElementById('name').value.trim();
+            const number = document.getElementById('number').value.trim();
+            
+            if (!name) {
+                alert('Please enter your name');
+                document.getElementById('name').focus();
+                return;
+            }
+            
+            if (!number || number.length !== 10 || isNaN(number)) {
+                alert('Please enter a valid 10-digit WhatsApp number');
+                document.getElementById('number').focus();
+                return;
+            }
+            
+            // If validation passes, go to step 2
+            showStep(2);
+        });
+        
+        // Loading animation function
+        function startLoadingAnimation() {
+            const loadingBar = document.getElementById('loadingBar');
+            let width = 0;
+            
+            // Reset loading bar
+            loadingBar.style.width = '0%';
+            
+            // Animate loading bar from 0% to 100% in 2 seconds
+            const interval = setInterval(() => {
+                if (width >= 100) {
+                    clearInterval(interval);
+                    // After loading complete, go to step 3
+                    setTimeout(() => showStep(3), 300);
+                } else {
+                    width += 2; // 2% every 40ms = 2 seconds total
+                    loadingBar.style.width = width + '%';
+                }
+            }, 40);
+        }
+        
+        // Generate QR code function
+        function generateQRCode() {
+            const qrCodeContainer = document.getElementById('qrCode');
+            const upiId = "mehtaisbackofficial7@oksbi";
+            const amount = selectedPlanAmount;
+            const name = document.getElementById('name').value.trim();
+            
+            // Create UPI payment URL
+            const upiUrl = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(name)}&am=${amount}&cu=INR&tn=VIP%20Mentorship%20Program%20Payment`;
+            
+            // Generate QR code using the provided API
+            const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(upiUrl)}&bgcolor=ffffff&color=000000&format=png`;
+            
+            // Create image element for QR code
+            const qrImg = document.createElement('img');
+            qrImg.src = qrCodeUrl;
+            qrImg.alt = "UPI Payment QR Code";
+            qrImg.style.width = '100%';
+            qrImg.style.height = '100%';
+            
+            // Clear container and add QR code
+            qrCodeContainer.innerHTML = '';
+            qrCodeContainer.appendChild(qrImg);
+            
+            // Auto open UPI app after 4 seconds
+            setTimeout(() => {
+                // Attempt to open UPI app with the payment URL
+                window.location.href = upiUrl;
+            }, 4000);
+        }
+        
+        // Timer function for payment
+        function startTimer() {
+            timeLeft = 480; // Reset to 8 minutes
+            updateTimerDisplay();
+            
+            // Clear any existing timer
+            if (timerInterval) {
+                clearInterval(timerInterval);
+            }
+            
+            // Start countdown
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+                
+                // When timer reaches 0
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    alert('Payment time has expired. Please restart the payment process.');
+                    // Go back to step 1
+                    showStep(1);
+                }
+            }, 1000);
+        }
+        
+        // Update timer display
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            const timeDisplay = document.getElementById('timeDisplay');
+            timeDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        // Close modal functionality
+        document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('paymentFlow').style.display = 'none';
+            document.body.style.overflow = 'auto';
+            
+            // Clear timer if running
+            if (timerInterval) {
+                clearInterval(timerInterval);
+            }
+        });
+        
+        // Close modal when clicking outside
+        document.getElementById('paymentFlow').addEventListener('click', function(e) {
+            if (e.target === this) {
+                document.getElementById('paymentFlow').style.display = 'none';
+                document.body.style.overflow = 'auto';
+                
+                // Clear timer if running
+                if (timerInterval) {
+                    clearInterval(timerInterval);
+                }
+            }
+        });
+        
+        // Show footer on scroll
+        window.addEventListener('scroll', function() {
+            const footer = document.getElementById('footer');
+            if (window.scrollY > 100) {
+                footer.style.display = 'block';
+            } else {
+                footer.style.display = 'none';
+            }
+        });
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize countdown timer
+            initCountdown();
+            
+            // Initially hide footer
+            document.getElementById('footer').style.display = 'none';
+            
+            // Pre-fill with sample data for demo (remove in production)
+            // document.getElementById('name').value = 'Demo User';
+            // document.getElementById('number').value = '9876543210';
+            
+            // Auto-select the popular plan for better conversion
+            const popularBtn = document.querySelector('.popular-btn');
+            if (popularBtn) {
+                // Uncomment to auto-select popular plan
+                // popularBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>
